@@ -10,7 +10,10 @@ import org.springframework.context.annotation.ComponentScan;
 public class Application {
 
     public static void main(String[] args) throws java.lang.InterruptedException {
-        Thread.sleep(600000);
+        for (int i=1; i<=6; i++){
+            Thread.sleep(10000);
+            System.out.println("System starting up: " + i*10 + "/60");
+        }
         SpringApplication.run(Application.class, args);    
     }
 }
